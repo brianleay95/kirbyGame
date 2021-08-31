@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js" defer type="module"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>Kirby Snack Hunt</header>
+    <section class="scoreClass">
+      <p>Score</p>
+      <div id="score">0</div>
+    </section>
+    
+
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+
+    <main>
+      <section class="grid"></section>
+      
+      <audio id="myAudio">
+        <source src="assets\ｎｉｎｔｅｎｄｏ　ａｎｄ　ｌｏｆｉ　ＩＩ.mp3" type="audio/mpeg" >
+      </audio>
+      <section class="instructions"><p>Used WASD or the Up, Down, Right and Left keys, to move the Kirbys</p> <img src="assets\arrowKeys.png" alt=""> </section>
+      <section class="start"><button>START</button></section>
+
+      <section class="gameOver">
+        <h2>Game Over</h2>
+        <p>Kirbys collected</p>
+        <span class="kirbysCollected">0</span>
+        <p>Your total score</p>
+        <span class="TotalScore">0</span>
+        <p>Best Score</p>
+        <span class="bestScore">0</span>
+      </section>
+
+    </main>
+   
+</body>
+</html>

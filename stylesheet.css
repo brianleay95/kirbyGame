@@ -1,0 +1,196 @@
+/* the enviroment */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background:rgb(246, 255, 248); */
+  background-image: url("assets/ddkuzt7-6b4abb41-94ed-43f2-a5be-7feb889a9e2c.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: 30px rgb(107, 144, 128);
+}
+
+/* the green border */
+#top, #bottom, #left, #right {
+  background: rgb(255, 239, 13);
+  position: fixed;
+}
+#left, #right {
+top: 0; bottom: 0;
+width: 15px;
+}
+#left { left: 0; }
+#right { right: 0; }
+
+#top, #bottom {
+left: 0; right: 0;
+height: 15px;
+}
+#top { top: 0; }
+#bottom { bottom: 0; }
+
+/* the title of the game */
+header {
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 132, 239);
+  border-bottom: 1px solid white;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.scoreClass p {
+  font-family: fantasy;
+  font-size: 30px;
+  color: antiquewhite;
+}
+.scoreClass div {
+  font-family: fantasy;
+  font-size: 30px;
+  color: antiquewhite;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 100vh;
+}
+
+.grid {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* margin: 0 48px; */
+  border: 1px solid rgb(255, 239, 13);
+  /* background: rgb(0, 98, 45); */
+  background-image: url("assets/grass.png");
+  background-repeat:repeat;
+  background-size:80px;
+  border-radius: 10px;
+}
+
+.cell {
+  display: grid;
+  height: 30px;
+  width: 30px;
+  /* border: 0.5px solid black; */
+}
+
+/* the snake in the game */
+.snake{
+  height: 30px;
+  width: 30px;
+  background-image: url("assets/NicePng_8bit-png_3397514.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(230, 116, 192); */
+  display: grid;
+  grid-column-start: 50;
+  grid-row-start: 50;
+  grid-row: 50 / span 70;
+  grid-column: 50 / span 70;
+  /* border-radius: 40%; */
+  /* border: .25vmin solid black; */
+} 
+.apple{
+  height: 29px;
+  width: 29px;
+}
+/* button to start the game */
+
+
+.start{
+  display: grid;
+  grid-column-start: 3;
+  grid-row-start: 5;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  border-radius: 10px;
+  /* padding: 20px; */
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(234, 244, 244);
+}
+.start button{
+  display: grid;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 30px;
+  text-decoration: none;
+  background-color: rgb(234, 244, 244);
+  border: none;
+}
+.instructions{
+  display: show;
+  background-color: rgb(245, 225, 42);
+  border: 10px rgb(255, 54, 88);
+  color: rgb(255, 13, 0);
+  text-align: center;
+  padding: 20px;
+  align-content: center;
+  justify-items: center;
+  width:200px;
+  height:200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0.5px black;
+}
+.instructions img{
+  width: 100px;
+  padding-top: 10px;
+  align-content: center;
+}
+
+.gameOver{
+  display: none;
+  background-color: rgb(245, 225, 42);
+  border: 10px rgb(255, 54, 88);
+  color: rgb(255, 13, 0);
+ padding: 20px;
+  align-content: center;
+  justify-items: center;
+  width:200px;
+  height:200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0.5px black;
+}
+.gameOver h2{
+  color: black;
+}
